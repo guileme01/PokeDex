@@ -1,0 +1,117 @@
+:root {
+    /* Sombras */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+  
+    /* Botões e menus */
+    --button-bg: #fefefe00;
+    --menu-bg: #f4f7fb;
+  
+    /* Cores de fontes e ícones */
+    --text-primary: #5b5f6e;
+    --text-secondary: #9ea7b5;
+    --highlight: #ffa726;
+  
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Arial";
+    background: linear-gradient(to top, var(--bg-gradient-start), var(--bg-gradient-end));
+
+}
+
+.header {
+    height: 7vh;
+    position: sticky;
+    background-color: var(--menu-bg);
+    box-shadow: 0 4px 10px var(--shadow-light);
+    top: 0;
+    box-shadow: 5px, 5px,5px black;
+}
+
+.header__image {
+    display: block;
+    height: 95%;
+    width: auto;
+    margin-left: 1%;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3% 0 0 0;
+}
+
+.main__section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+.main__section__card {
+    grid-column: span 3;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__section__card img {
+    width: 100%;
+}
+
+.main__section__card__info {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main__section__card__info__btn {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: var(--button-bg);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .main__section__card {
+        grid-column: span 12;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .main__section__card {
+        grid-column: span 12;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main__section__card {
+        grid-column: span 6;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
