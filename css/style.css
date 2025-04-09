@@ -66,6 +66,7 @@ body {
 
 .main__section__card img {
     width: 100%;
+    cursor: pointer;
 }
 
 .main__section__card__info {
