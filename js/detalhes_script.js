@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const apiURL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
-  
     // Chama a API para obter os dados do Pokémon
     fetch(apiURL)
     .then(response => {
